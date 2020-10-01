@@ -3,13 +3,17 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "postinstall": "ng build --oat --target=production"
   },
   "private": true,
   "dependencies": {
+    "@angular/cli": "~10.1.3",
+    "@angular/compiler-cli": "~10.1.3",
+    "typescript": "~4.0.2",
     "@angular/animations": "~10.1.3",
     "@angular/cdk": "^10.2.3",
     "@angular/common": "~10.1.3",
@@ -20,6 +24,7 @@
     "@angular/platform-browser": "~10.1.3",
     "@angular/platform-browser-dynamic": "~10.1.3",
     "@angular/router": "~10.1.3",
+    "express": "^4.17.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
@@ -32,5 +37,9 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.0.2"
+  },
+  "engines": {
+    "node" : "6.14.5",
+    "npm" : "6.14.5"
   }
 }
